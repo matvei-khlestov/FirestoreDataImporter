@@ -5,13 +5,10 @@
 //  Created by Matvei Khlestov on 06.01.2026.
 //
 
+
 import UIKit
 
 final class FirestoreImportViewController: UIViewController {
-    
-    // MARK: - Callbacks
-    
-    var onFinish: (() -> Void)?
     
     // MARK: - Dependencies
     
@@ -23,10 +20,12 @@ final class FirestoreImportViewController: UIViewController {
         enum Insets {
             static let horizontal: CGFloat = 16
             static let verticalTop: CGFloat = 20
-            static let logContentTop: CGFloat = 10
-            static let logContentLeft: CGFloat = 8
-            static let logContentBottom: CGFloat = 10
-            static let logContentRight: CGFloat = 8
+            static let logContent: UIEdgeInsets = .init(
+                top: 10,
+                left: 8,
+                bottom: 10,
+                right: 8
+            )
         }
         enum Spacing {
             static let verticalStack: CGFloat = 16
@@ -54,7 +53,7 @@ final class FirestoreImportViewController: UIViewController {
     // MARK: - Texts
     
     private enum Texts {
-        static let navigationTitle = "Импорт данных (DEBUG)"
+        static let navigationTitle = "Импорт данных"
         static let enableImport = "Включить импорт"
         static let overwriteExisting = "Перезаписывать существующие"
         static let seedVersionTitle = "Версия сид-данных"
@@ -149,12 +148,7 @@ final class FirestoreImportViewController: UIViewController {
         v.isEditable = false
         v.backgroundColor = .secondarySystemBackground
         v.layer.cornerRadius = Metrics.Sizes.logViewCornerRadius
-        v.textContainerInset = .init(
-            top: Metrics.Insets.logContentTop,
-            left: Metrics.Insets.logContentLeft,
-            bottom: Metrics.Insets.logContentBottom,
-            right: Metrics.Insets.logContentRight
-        )
+        v.textContainerInset = Metrics.Insets.logContent
         v.font = Metrics.Fonts.logText
         v.textColor = .label
         let paragraph = NSMutableParagraphStyle()
@@ -273,7 +267,7 @@ private extension FirestoreImportViewController {
     }
     
     func setupNavigationBar() {
-        title = "Импорт данных"
+        title = Texts.navigationTitle
         navigationItem.largeTitleDisplayMode = .always
         navigationController?.navigationBar.prefersLargeTitles = true
     }

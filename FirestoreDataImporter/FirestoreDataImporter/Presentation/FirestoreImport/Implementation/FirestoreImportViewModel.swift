@@ -28,15 +28,23 @@ final class FirestoreImportViewModel: FirestoreImportViewModelProtocol {
     ) {
         self.debugImportStorage = debugImportStorage
         self.debugImporter = debugImporter
+        
         let didRun = debugImportStorage.didRunOnce
         let overwrite = debugImportStorage.isOverwriteEnabled
         let version = debugImportStorage.requiredSeedVersion
+        
         self.state = FirestoreImportState(
             hasRunBefore: didRun,
             isEnabledFlag: SeedConfig.isEnabled,
             overwrite: overwrite,
             seedVersion: version
         )
+        
+        bindImporterLogsIfPossible()
+    }
+    
+    deinit {
+        (debugImporter as? FirestoreImportLogEmitting)?.onLog = nil
     }
     
     // MARK: - Public Methods
@@ -54,7 +62,6 @@ final class FirestoreImportViewModel: FirestoreImportViewModelProtocol {
         append("⚙️ Overwrite = \(isOn)")
     }
     
-    /// Установить требуемую версию сид-данных (сохранится в UserDefaults).
     func setSeedVersion(_ version: Int) {
         let newValue = max(1, version)
         debugImportStorage.requiredSeedVersion = newValue
@@ -62,7 +69,6 @@ final class FirestoreImportViewModel: FirestoreImportViewModelProtocol {
         append("🏷️ Версия сид-данных = \(newValue)")
     }
     
-    /// Инкремент/декремент версии (для степпера).
     func bumpSeedVersion(by delta: Int) {
         setSeedVersion(state.seedVersion + delta)
     }
@@ -71,14 +77,6 @@ final class FirestoreImportViewModel: FirestoreImportViewModelProtocol {
         guard !state.isRunning else { return }
         state.isRunning = true
         append("⏳ Запуск импорта…")
-        
-        if let importer = debugImporter as? FirestoreImporter {
-            importer.onLog = { [weak self] line in
-                Task { @MainActor in
-                    self?.append(line)
-                }
-            }
-        }
         
         Task { [weak self] in
             guard let self else { return }
@@ -89,7 +87,8 @@ final class FirestoreImportViewModel: FirestoreImportViewModelProtocol {
                 pruneMissing: true
             )
             
-            await MainActor.run {
+            await MainActor.run { [weak self] in
+                guard let self else { return }
                 self.refreshDerivedState()
                 self.state.isRunning = false
                 self.append("✅ Завершено.")
@@ -105,12 +104,22 @@ final class FirestoreImportViewModel: FirestoreImportViewModelProtocol {
     
     // MARK: - Private Methods
     
+    private func bindImporterLogsIfPossible() {
+        guard let emitter = debugImporter as? FirestoreImportLogEmitting else { return }
+        
+        emitter.onLog = { [weak self] line in
+            Task { @MainActor [weak self] in
+                guard let self else { return }
+                self.append(line)
+            }
+        }
+    }
+    
     private func append(_ line: String) {
         let prefix = state.log.isEmpty ? "" : "\n"
         state.log.append("\(prefix)\(line)")
     }
     
-    /// Обновляет вычисляемые поля из стораджа в локальном состоянии.
     private func refreshDerivedState() {
         state.hasRunBefore = debugImportStorage.didRunOnce
         state.isEnabledFlag = SeedConfig.isEnabled

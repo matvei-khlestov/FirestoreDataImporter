@@ -43,6 +43,16 @@
 		A091BF342F0CDBF000DA4E8B /* FactoryKit in Frameworks */ = {isa = PBXBuildFile; productRef = A091BF332F0CDBF000DA4E8B /* FactoryKit */; };
 		A091BF3B2F0CDCBF00DA4E8B /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091BF3A2F0CDCBF00DA4E8B /* DIContainer.swift */; };
 		A091BF3D2F0CE0F400DA4E8B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A091BF3C2F0CE0F400DA4E8B /* GoogleService-Info.plist */; };
+		A091BF402F0D0C0000DA4E8B /* BundleSeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091BF3F2F0D0C0000DA4E8B /* BundleSeedLoader.swift */; };
+		A091BF422F0D0C2500DA4E8B /* SeedChecksumProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091BF412F0D0C2500DA4E8B /* SeedChecksumProvider.swift */; };
+		A091BF442F0D0C3800DA4E8B /* FirestoreDryRunBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091BF432F0D0C3800DA4E8B /* FirestoreDryRunBuilder.swift */; };
+		A091BF462F0D0C4F00DA4E8B /* FirestoreBatchExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091BF452F0D0C4F00DA4E8B /* FirestoreBatchExecutor.swift */; };
+		A091BF482F0D0C6900DA4E8B /* BundleSeedLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091BF472F0D0C6900DA4E8B /* BundleSeedLoading.swift */; };
+		A091BF4A2F0D0C7A00DA4E8B /* SeedChecksumProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091BF492F0D0C7A00DA4E8B /* SeedChecksumProviding.swift */; };
+		A091BF4C2F0D0C8B00DA4E8B /* FirestoreDryRunBuilding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091BF4B2F0D0C8B00DA4E8B /* FirestoreDryRunBuilding.swift */; };
+		A091BF4E2F0D0CA000DA4E8B /* FirestoreBatchExecuting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091BF4D2F0D0CA000DA4E8B /* FirestoreBatchExecuting.swift */; };
+		A091BF502F0D0CB500DA4E8B /* SeedIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091BF4F2F0D0CB500DA4E8B /* SeedIdentifiable.swift */; };
+		A091BF522F0D107C00DA4E8B /* FirestoreBatchExecuting+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091BF512F0D107C00DA4E8B /* FirestoreBatchExecuting+Defaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +90,16 @@
 		A091BF2E2F0CD84800DA4E8B /* UIButton+OnTap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+OnTap.swift"; sourceTree = "<group>"; };
 		A091BF3A2F0CDCBF00DA4E8B /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		A091BF3C2F0CE0F400DA4E8B /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A091BF3F2F0D0C0000DA4E8B /* BundleSeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleSeedLoader.swift; sourceTree = "<group>"; };
+		A091BF412F0D0C2500DA4E8B /* SeedChecksumProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeedChecksumProvider.swift; sourceTree = "<group>"; };
+		A091BF432F0D0C3800DA4E8B /* FirestoreDryRunBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreDryRunBuilder.swift; sourceTree = "<group>"; };
+		A091BF452F0D0C4F00DA4E8B /* FirestoreBatchExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreBatchExecutor.swift; sourceTree = "<group>"; };
+		A091BF472F0D0C6900DA4E8B /* BundleSeedLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleSeedLoading.swift; sourceTree = "<group>"; };
+		A091BF492F0D0C7A00DA4E8B /* SeedChecksumProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeedChecksumProviding.swift; sourceTree = "<group>"; };
+		A091BF4B2F0D0C8B00DA4E8B /* FirestoreDryRunBuilding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreDryRunBuilding.swift; sourceTree = "<group>"; };
+		A091BF4D2F0D0CA000DA4E8B /* FirestoreBatchExecuting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreBatchExecuting.swift; sourceTree = "<group>"; };
+		A091BF4F2F0D0CB500DA4E8B /* SeedIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeedIdentifiable.swift; sourceTree = "<group>"; };
+		A091BF512F0D107C00DA4E8B /* FirestoreBatchExecuting+Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FirestoreBatchExecuting+Defaults.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,6 +311,10 @@
 			children = (
 				A091BF012F0CC9D100DA4E8B /* FirestoreImportService.swift */,
 				A091BF032F0CC9E200DA4E8B /* FirestoreImporter.swift */,
+				A091BF3F2F0D0C0000DA4E8B /* BundleSeedLoader.swift */,
+				A091BF412F0D0C2500DA4E8B /* SeedChecksumProvider.swift */,
+				A091BF432F0D0C3800DA4E8B /* FirestoreDryRunBuilder.swift */,
+				A091BF452F0D0C4F00DA4E8B /* FirestoreBatchExecutor.swift */,
 			);
 			path = Implementation;
 			sourceTree = "<group>";
@@ -300,6 +324,12 @@
 			children = (
 				A091BF212F0CD41B00DA4E8B /* FirestoreImportServicingProtocol.swift */,
 				A091BF232F0CD43300DA4E8B /* FirestoreImportingProtocol.swift */,
+				A091BF472F0D0C6900DA4E8B /* BundleSeedLoading.swift */,
+				A091BF492F0D0C7A00DA4E8B /* SeedChecksumProviding.swift */,
+				A091BF4B2F0D0C8B00DA4E8B /* FirestoreDryRunBuilding.swift */,
+				A091BF4D2F0D0CA000DA4E8B /* FirestoreBatchExecuting.swift */,
+				A091BF512F0D107C00DA4E8B /* FirestoreBatchExecuting+Defaults.swift */,
+				A091BF4F2F0D0CB500DA4E8B /* SeedIdentifiable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -438,6 +468,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A091BF402F0D0C0000DA4E8B /* BundleSeedLoader.swift in Sources */,
+				A091BF462F0D0C4F00DA4E8B /* FirestoreBatchExecutor.swift in Sources */,
 				A091BED72F0CBBD600DA4E8B /* AppDelegate.swift in Sources */,
 				A091BF222F0CD41B00DA4E8B /* FirestoreImportServicingProtocol.swift in Sources */,
 				A091BED82F0CBBD600DA4E8B /* SceneDelegate.swift in Sources */,
@@ -448,11 +480,15 @@
 				A091BEE22F0CC38D00DA4E8B /* FirestoreImportViewController.swift in Sources */,
 				A091BF132F0CD1AC00DA4E8B /* DryRunReport.swift in Sources */,
 				A091BF072F0CCA1000DA4E8B /* SeedConfig.swift in Sources */,
+				A091BF442F0D0C3800DA4E8B /* FirestoreDryRunBuilder.swift in Sources */,
 				A091BF042F0CC9E200DA4E8B /* FirestoreImporter.swift in Sources */,
 				A091BEEA2F0CC47600DA4E8B /* Brand.swift in Sources */,
+				A091BF482F0D0C6900DA4E8B /* BundleSeedLoading.swift in Sources */,
 				A091BEE42F0CC3A000DA4E8B /* FirestoreImportViewModel.swift in Sources */,
+				A091BF522F0D107C00DA4E8B /* FirestoreBatchExecuting+Defaults.swift in Sources */,
 				A091BEFA2F0CC8E600DA4E8B /* FirestoreImportStoringProtocol.swift in Sources */,
 				A091BF192F0CD21400DA4E8B /* PreparedInputs.swift in Sources */,
+				A091BF422F0D0C2500DA4E8B /* SeedChecksumProvider.swift in Sources */,
 				A091BEF52F0CC84500DA4E8B /* FirestoreImportStorage.swift in Sources */,
 				A091BF2B2F0CD72600DA4E8B /* SHA256.swift in Sources */,
 				A091BF172F0CD1D300DA4E8B /* SectionWriteResult.swift in Sources */,
@@ -460,7 +496,11 @@
 				A091BF242F0CD43300DA4E8B /* FirestoreImportingProtocol.swift in Sources */,
 				A091BF2F2F0CD84800DA4E8B /* UIButton+OnTap.swift in Sources */,
 				A091BEE62F0CC3C300DA4E8B /* FirestoreImportState.swift in Sources */,
+				A091BF4E2F0D0CA000DA4E8B /* FirestoreBatchExecuting.swift in Sources */,
+				A091BF502F0D0CB500DA4E8B /* SeedIdentifiable.swift in Sources */,
 				A091BEEC2F0CC48C00DA4E8B /* Category.swift in Sources */,
+				A091BF4A2F0D0C7A00DA4E8B /* SeedChecksumProviding.swift in Sources */,
+				A091BF4C2F0D0C8B00DA4E8B /* FirestoreDryRunBuilding.swift in Sources */,
 				A091BF152F0CD1C200DA4E8B /* ImportOutcome.swift in Sources */,
 				A091BEF72F0CC85F00DA4E8B /* ChecksumStore.swift in Sources */,
 				A091BEF12F0CC74700DA4E8B /* FirestoreImportViewModelProtocol.swift in Sources */,

@@ -11,11 +11,10 @@ import FirebaseFirestore
 
 // MARK: - Debug Import Orchestrator
 
-final class FirestoreImporter: FirestoreImportingProtocol {
+final class FirestoreImporter: FirestoreImportingProtocol, FirestoreImportLogEmitting {
     
-    // MARK: - Callbacks
+    // MARK: - Public
     
-    /// Вызывается на каждую строку лога (UI может подписаться и показывать в logView).
     var onLog: ((String) -> Void)?
     
     // MARK: - Properties
@@ -115,17 +114,14 @@ final class FirestoreImporter: FirestoreImportingProtocol {
             dryRun: true,
             pruneMissing: pruneMissing
         )
-        
         log("📊 [DebugImporter] Dry-run отчёт:")
         
         let lines = report.summary.components(separatedBy: .newlines)
         let bodyLines = (lines.first?.trimmingCharacters(in: .whitespacesAndNewlines).hasPrefix("Dry-run:") == true)
         ? Array(lines.dropFirst())
         : lines
-        
-        for line in bodyLines.map({ $0.trimmingCharacters(in: .whitespacesAndNewlines) }) where !line.isEmpty {
-            log(line)
-        }
+        let body = bodyLines.joined(separator: "\n").trimmingCharacters(in: .whitespacesAndNewlines)
+        if !body.isEmpty { log(body) }
         
         return report
     }
@@ -147,10 +143,12 @@ final class FirestoreImporter: FirestoreImportingProtocol {
         markAsSeeded()
         
         let dt = Date().timeIntervalSince(startedAt)
-        log("✅ [DebugImporter] Импорт выполнен за \(String(format: "%.2f", dt))s")
-        log("• Brands — upsert: \(outcome.brands), deleted: \(outcome.brandsDeleted)")
-        log("• Categories — upsert: \(outcome.categories), deleted: \(outcome.categoriesDeleted)")
-        log("• Products — upsert: \(outcome.products), deleted: \(outcome.productsDeleted)")
+        log("""
+        ✅ [DebugImporter] Импорт выполнен за \(String(format: "%.2f", dt))s
+        • Brands — upsert: \(outcome.brands), deleted: \(outcome.brandsDeleted)
+        • Categories — upsert: \(outcome.categories), deleted: \(outcome.categoriesDeleted)
+        • Products — upsert: \(outcome.products), deleted: \(outcome.productsDeleted)
+        """)
     }
     
     private func markAsSeeded() {
@@ -170,10 +168,7 @@ final class FirestoreImporter: FirestoreImportingProtocol {
     @inline(__always)
     private func log(_ message: String) {
         let line = "[\(df.string(from: Date()))] \(message)"
-        if let onLog {
-            onLog(line)
-        } else {
-            print(line)
-        }
+        onLog?(line)
+        print(line)
     }
 }

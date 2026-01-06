@@ -21,6 +21,11 @@ protocol FirestoreImportingProtocol: AnyObject {
     func resetMarkers()
 }
 
+/// Отдельный маленький контракт для эмиссии логов (ISP + DIP).
+protocol FirestoreImportLogEmitting: AnyObject {
+    var onLog: ((String) -> Void)? { get set }
+}
+
 // Удобный враппер с дефолтными параметрами
 extension FirestoreImportingProtocol {
     @inlinable
