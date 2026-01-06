@@ -9,9 +9,40 @@
 /* Begin PBXBuildFile section */
 		A091BED72F0CBBD600DA4E8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091BECD2F0CBBD600DA4E8B /* AppDelegate.swift */; };
 		A091BED82F0CBBD600DA4E8B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091BED42F0CBBD600DA4E8B /* SceneDelegate.swift */; };
-		A091BED92F0CBBD600DA4E8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091BED52F0CBBD600DA4E8B /* ViewController.swift */; };
 		A091BEDA2F0CBBD600DA4E8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A091BECE2F0CBBD600DA4E8B /* Assets.xcassets */; };
 		A091BEDC2F0CBBD600DA4E8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A091BED12F0CBBD600DA4E8B /* LaunchScreen.storyboard */; };
+		A091BEE22F0CC38D00DA4E8B /* FirestoreImportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091BEE12F0CC38D00DA4E8B /* FirestoreImportViewController.swift */; };
+		A091BEE42F0CC3A000DA4E8B /* FirestoreImportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091BEE32F0CC3A000DA4E8B /* FirestoreImportViewModel.swift */; };
+		A091BEE62F0CC3C300DA4E8B /* FirestoreImportState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091BEE52F0CC3C300DA4E8B /* FirestoreImportState.swift */; };
+		A091BEEA2F0CC47600DA4E8B /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091BEE92F0CC47600DA4E8B /* Brand.swift */; };
+		A091BEEC2F0CC48C00DA4E8B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091BEEB2F0CC48C00DA4E8B /* Category.swift */; };
+		A091BEEE2F0CC4A700DA4E8B /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091BEED2F0CC4A700DA4E8B /* Product.swift */; };
+		A091BEF12F0CC74700DA4E8B /* FirestoreImportViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091BEF02F0CC74700DA4E8B /* FirestoreImportViewModelProtocol.swift */; };
+		A091BEF52F0CC84500DA4E8B /* FirestoreImportStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091BEF42F0CC84500DA4E8B /* FirestoreImportStorage.swift */; };
+		A091BEF72F0CC85F00DA4E8B /* ChecksumStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091BEF62F0CC85F00DA4E8B /* ChecksumStore.swift */; };
+		A091BEFA2F0CC8E600DA4E8B /* FirestoreImportStoringProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091BEF92F0CC8E600DA4E8B /* FirestoreImportStoringProtocol.swift */; };
+		A091BEFC2F0CC91C00DA4E8B /* ChecksumStoringProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091BEFB2F0CC91C00DA4E8B /* ChecksumStoringProtocol.swift */; };
+		A091BF022F0CC9D100DA4E8B /* FirestoreImportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091BF012F0CC9D100DA4E8B /* FirestoreImportService.swift */; };
+		A091BF042F0CC9E200DA4E8B /* FirestoreImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091BF032F0CC9E200DA4E8B /* FirestoreImporter.swift */; };
+		A091BF072F0CCA1000DA4E8B /* SeedConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091BF062F0CCA1000DA4E8B /* SeedConfig.swift */; };
+		A091BF0E2F0CCAF500DA4E8B /* brands.json in Resources */ = {isa = PBXBuildFile; fileRef = A091BF0A2F0CCAF500DA4E8B /* brands.json */; };
+		A091BF0F2F0CCAF500DA4E8B /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = A091BF0C2F0CCAF500DA4E8B /* products.json */; };
+		A091BF102F0CCAF500DA4E8B /* categories.json in Resources */ = {isa = PBXBuildFile; fileRef = A091BF0B2F0CCAF500DA4E8B /* categories.json */; };
+		A091BF132F0CD1AC00DA4E8B /* DryRunReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091BF122F0CD1AC00DA4E8B /* DryRunReport.swift */; };
+		A091BF152F0CD1C200DA4E8B /* ImportOutcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091BF142F0CD1C200DA4E8B /* ImportOutcome.swift */; };
+		A091BF172F0CD1D300DA4E8B /* SectionWriteResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091BF162F0CD1D300DA4E8B /* SectionWriteResult.swift */; };
+		A091BF192F0CD21400DA4E8B /* PreparedInputs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091BF182F0CD21400DA4E8B /* PreparedInputs.swift */; };
+		A091BF1C2F0CD33A00DA4E8B /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = A091BF1B2F0CD33A00DA4E8B /* FirebaseCore */; };
+		A091BF1E2F0CD33A00DA4E8B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A091BF1D2F0CD33A00DA4E8B /* FirebaseFirestore */; };
+		A091BF222F0CD41B00DA4E8B /* FirestoreImportServicingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091BF212F0CD41B00DA4E8B /* FirestoreImportServicingProtocol.swift */; };
+		A091BF242F0CD43300DA4E8B /* FirestoreImportingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091BF232F0CD43300DA4E8B /* FirestoreImportingProtocol.swift */; };
+		A091BF272F0CD69D00DA4E8B /* ImportError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091BF262F0CD69D00DA4E8B /* ImportError.swift */; };
+		A091BF2B2F0CD72600DA4E8B /* SHA256.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091BF2A2F0CD72600DA4E8B /* SHA256.swift */; };
+		A091BF2F2F0CD84800DA4E8B /* UIButton+OnTap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091BF2E2F0CD84800DA4E8B /* UIButton+OnTap.swift */; };
+		A091BF322F0CDBF000DA4E8B /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = A091BF312F0CDBF000DA4E8B /* Factory */; };
+		A091BF342F0CDBF000DA4E8B /* FactoryKit in Frameworks */ = {isa = PBXBuildFile; productRef = A091BF332F0CDBF000DA4E8B /* FactoryKit */; };
+		A091BF3B2F0CDCBF00DA4E8B /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091BF3A2F0CDCBF00DA4E8B /* DIContainer.swift */; };
+		A091BF3D2F0CE0F400DA4E8B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A091BF3C2F0CE0F400DA4E8B /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,7 +52,34 @@
 		A091BECF2F0CBBD600DA4E8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A091BED02F0CBBD600DA4E8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A091BED42F0CBBD600DA4E8B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A091BED52F0CBBD600DA4E8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A091BEE12F0CC38D00DA4E8B /* FirestoreImportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreImportViewController.swift; sourceTree = "<group>"; };
+		A091BEE32F0CC3A000DA4E8B /* FirestoreImportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreImportViewModel.swift; sourceTree = "<group>"; };
+		A091BEE52F0CC3C300DA4E8B /* FirestoreImportState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreImportState.swift; sourceTree = "<group>"; };
+		A091BEE92F0CC47600DA4E8B /* Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
+		A091BEEB2F0CC48C00DA4E8B /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		A091BEED2F0CC4A700DA4E8B /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		A091BEF02F0CC74700DA4E8B /* FirestoreImportViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreImportViewModelProtocol.swift; sourceTree = "<group>"; };
+		A091BEF42F0CC84500DA4E8B /* FirestoreImportStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreImportStorage.swift; sourceTree = "<group>"; };
+		A091BEF62F0CC85F00DA4E8B /* ChecksumStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecksumStore.swift; sourceTree = "<group>"; };
+		A091BEF92F0CC8E600DA4E8B /* FirestoreImportStoringProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreImportStoringProtocol.swift; sourceTree = "<group>"; };
+		A091BEFB2F0CC91C00DA4E8B /* ChecksumStoringProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecksumStoringProtocol.swift; sourceTree = "<group>"; };
+		A091BF012F0CC9D100DA4E8B /* FirestoreImportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreImportService.swift; sourceTree = "<group>"; };
+		A091BF032F0CC9E200DA4E8B /* FirestoreImporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreImporter.swift; sourceTree = "<group>"; };
+		A091BF062F0CCA1000DA4E8B /* SeedConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeedConfig.swift; sourceTree = "<group>"; };
+		A091BF0A2F0CCAF500DA4E8B /* brands.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = brands.json; sourceTree = "<group>"; };
+		A091BF0B2F0CCAF500DA4E8B /* categories.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = categories.json; sourceTree = "<group>"; };
+		A091BF0C2F0CCAF500DA4E8B /* products.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
+		A091BF122F0CD1AC00DA4E8B /* DryRunReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DryRunReport.swift; sourceTree = "<group>"; };
+		A091BF142F0CD1C200DA4E8B /* ImportOutcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportOutcome.swift; sourceTree = "<group>"; };
+		A091BF162F0CD1D300DA4E8B /* SectionWriteResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionWriteResult.swift; sourceTree = "<group>"; };
+		A091BF182F0CD21400DA4E8B /* PreparedInputs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreparedInputs.swift; sourceTree = "<group>"; };
+		A091BF212F0CD41B00DA4E8B /* FirestoreImportServicingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreImportServicingProtocol.swift; sourceTree = "<group>"; };
+		A091BF232F0CD43300DA4E8B /* FirestoreImportingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreImportingProtocol.swift; sourceTree = "<group>"; };
+		A091BF262F0CD69D00DA4E8B /* ImportError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportError.swift; sourceTree = "<group>"; };
+		A091BF2A2F0CD72600DA4E8B /* SHA256.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHA256.swift; sourceTree = "<group>"; };
+		A091BF2E2F0CD84800DA4E8B /* UIButton+OnTap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+OnTap.swift"; sourceTree = "<group>"; };
+		A091BF3A2F0CDCBF00DA4E8B /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+		A091BF3C2F0CE0F400DA4E8B /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +87,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A091BF322F0CDBF000DA4E8B /* Factory in Frameworks */,
+				A091BF1C2F0CD33A00DA4E8B /* FirebaseCore in Frameworks */,
+				A091BF342F0CDBF000DA4E8B /* FactoryKit in Frameworks */,
+				A091BF1E2F0CD33A00DA4E8B /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,10 +116,14 @@
 		A091BED62F0CBBD600DA4E8B /* FirestoreDataImporter */ = {
 			isa = PBXGroup;
 			children = (
+				A091BF382F0CDC3800DA4E8B /* DI */,
 				A091BEDE2F0CBF0900DA4E8B /* App */,
-				A091BECE2F0CBBD600DA4E8B /* Assets.xcassets */,
+				A091BEDF2F0CC34C00DA4E8B /* Presentation */,
+				A091BEF22F0CC7D200DA4E8B /* Data */,
+				A091BEE72F0CC42D00DA4E8B /* Domain */,
+				A091BF282F0CD6E900DA4E8B /* Infrastructure */,
+				A091BF082F0CCA4300DA4E8B /* Resources */,
 				A091BED12F0CBBD600DA4E8B /* LaunchScreen.storyboard */,
-				A091BED52F0CBBD600DA4E8B /* ViewController.swift */,
 			);
 			path = FirestoreDataImporter;
 			sourceTree = "<group>";
@@ -68,8 +134,223 @@
 				A091BECD2F0CBBD600DA4E8B /* AppDelegate.swift */,
 				A091BED42F0CBBD600DA4E8B /* SceneDelegate.swift */,
 				A091BECF2F0CBBD600DA4E8B /* Info.plist */,
+				A091BF3C2F0CE0F400DA4E8B /* GoogleService-Info.plist */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		A091BEDF2F0CC34C00DA4E8B /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				A091BEE02F0CC37400DA4E8B /* FirestoreImport */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		A091BEE02F0CC37400DA4E8B /* FirestoreImport */ = {
+			isa = PBXGroup;
+			children = (
+				A091BEFE2F0CC95A00DA4E8B /* Implementation */,
+				A091BEEF2F0CC71100DA4E8B /* Protocols */,
+				A091BEFF2F0CC96800DA4E8B /* State */,
+			);
+			path = FirestoreImport;
+			sourceTree = "<group>";
+		};
+		A091BEE72F0CC42D00DA4E8B /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				A091BF112F0CD18800DA4E8B /* Reports */,
+				A091BEE82F0CC43500DA4E8B /* Models */,
+				A091BF252F0CD67E00DA4E8B /* Errors */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		A091BEE82F0CC43500DA4E8B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A091BEE92F0CC47600DA4E8B /* Brand.swift */,
+				A091BEEB2F0CC48C00DA4E8B /* Category.swift */,
+				A091BEED2F0CC4A700DA4E8B /* Product.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A091BEEF2F0CC71100DA4E8B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A091BEF02F0CC74700DA4E8B /* FirestoreImportViewModelProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A091BEF22F0CC7D200DA4E8B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A091BF002F0CC9AD00DA4E8B /* Services */,
+				A091BEF32F0CC82500DA4E8B /* Storage */,
+				A091BF052F0CC9F000DA4E8B /* Config */,
+				A091BF0D2F0CCAF500DA4E8B /* JSON */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		A091BEF32F0CC82500DA4E8B /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				A091BEFD2F0CC93A00DA4E8B /* Implementation */,
+				A091BEF82F0CC89E00DA4E8B /* Protocols */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		A091BEF82F0CC89E00DA4E8B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A091BEF92F0CC8E600DA4E8B /* FirestoreImportStoringProtocol.swift */,
+				A091BEFB2F0CC91C00DA4E8B /* ChecksumStoringProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A091BEFD2F0CC93A00DA4E8B /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				A091BEF42F0CC84500DA4E8B /* FirestoreImportStorage.swift */,
+				A091BEF62F0CC85F00DA4E8B /* ChecksumStore.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		A091BEFE2F0CC95A00DA4E8B /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				A091BEE12F0CC38D00DA4E8B /* FirestoreImportViewController.swift */,
+				A091BEE32F0CC3A000DA4E8B /* FirestoreImportViewModel.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		A091BEFF2F0CC96800DA4E8B /* State */ = {
+			isa = PBXGroup;
+			children = (
+				A091BEE52F0CC3C300DA4E8B /* FirestoreImportState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		A091BF002F0CC9AD00DA4E8B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A091BF1F2F0CD3D300DA4E8B /* Implementation */,
+				A091BF202F0CD3F900DA4E8B /* Protocols */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A091BF052F0CC9F000DA4E8B /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				A091BF062F0CCA1000DA4E8B /* SeedConfig.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		A091BF082F0CCA4300DA4E8B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A091BECE2F0CBBD600DA4E8B /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A091BF0D2F0CCAF500DA4E8B /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				A091BF0A2F0CCAF500DA4E8B /* brands.json */,
+				A091BF0B2F0CCAF500DA4E8B /* categories.json */,
+				A091BF0C2F0CCAF500DA4E8B /* products.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		A091BF112F0CD18800DA4E8B /* Reports */ = {
+			isa = PBXGroup;
+			children = (
+				A091BF122F0CD1AC00DA4E8B /* DryRunReport.swift */,
+				A091BF142F0CD1C200DA4E8B /* ImportOutcome.swift */,
+				A091BF162F0CD1D300DA4E8B /* SectionWriteResult.swift */,
+				A091BF182F0CD21400DA4E8B /* PreparedInputs.swift */,
+			);
+			path = Reports;
+			sourceTree = "<group>";
+		};
+		A091BF1F2F0CD3D300DA4E8B /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				A091BF012F0CC9D100DA4E8B /* FirestoreImportService.swift */,
+				A091BF032F0CC9E200DA4E8B /* FirestoreImporter.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		A091BF202F0CD3F900DA4E8B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A091BF212F0CD41B00DA4E8B /* FirestoreImportServicingProtocol.swift */,
+				A091BF232F0CD43300DA4E8B /* FirestoreImportingProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A091BF252F0CD67E00DA4E8B /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				A091BF262F0CD69D00DA4E8B /* ImportError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		A091BF282F0CD6E900DA4E8B /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				A091BF292F0CD71100DA4E8B /* Crypto */,
+				A091BF2D2F0CD82800DA4E8B /* Extensions */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		A091BF292F0CD71100DA4E8B /* Crypto */ = {
+			isa = PBXGroup;
+			children = (
+				A091BF2A2F0CD72600DA4E8B /* SHA256.swift */,
+			);
+			path = Crypto;
+			sourceTree = "<group>";
+		};
+		A091BF2D2F0CD82800DA4E8B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A091BF2E2F0CD84800DA4E8B /* UIButton+OnTap.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A091BF382F0CDC3800DA4E8B /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				A091BF392F0CDC7000DA4E8B /* Factory */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		A091BF392F0CDC7000DA4E8B /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				A091BF3A2F0CDCBF00DA4E8B /* DIContainer.swift */,
+			);
+			path = Factory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +370,10 @@
 			);
 			name = FirestoreDataImporter;
 			packageProductDependencies = (
+				A091BF1B2F0CD33A00DA4E8B /* FirebaseCore */,
+				A091BF1D2F0CD33A00DA4E8B /* FirebaseFirestore */,
+				A091BF312F0CDBF000DA4E8B /* Factory */,
+				A091BF332F0CDBF000DA4E8B /* FactoryKit */,
 			);
 			productName = FirestoreDataImporter;
 			productReference = A091BEB52F0CBBCC00DA4E8B /* FirestoreDataImporter.app */;
@@ -118,6 +403,10 @@
 			);
 			mainGroup = A091BEAC2F0CBBCC00DA4E8B;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				A091BF1A2F0CD33A00DA4E8B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				A091BF302F0CDBF000DA4E8B /* XCRemoteSwiftPackageReference "Factory" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A091BEB62F0CBBCC00DA4E8B /* Products */;
 			projectDirPath = "";
@@ -133,8 +422,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A091BF0E2F0CCAF500DA4E8B /* brands.json in Resources */,
+				A091BF0F2F0CCAF500DA4E8B /* products.json in Resources */,
+				A091BF102F0CCAF500DA4E8B /* categories.json in Resources */,
 				A091BEDA2F0CBBD600DA4E8B /* Assets.xcassets in Resources */,
 				A091BEDC2F0CBBD600DA4E8B /* LaunchScreen.storyboard in Resources */,
+				A091BF3D2F0CE0F400DA4E8B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,8 +439,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				A091BED72F0CBBD600DA4E8B /* AppDelegate.swift in Sources */,
+				A091BF222F0CD41B00DA4E8B /* FirestoreImportServicingProtocol.swift in Sources */,
 				A091BED82F0CBBD600DA4E8B /* SceneDelegate.swift in Sources */,
-				A091BED92F0CBBD600DA4E8B /* ViewController.swift in Sources */,
+				A091BF022F0CC9D100DA4E8B /* FirestoreImportService.swift in Sources */,
+				A091BEEE2F0CC4A700DA4E8B /* Product.swift in Sources */,
+				A091BEFC2F0CC91C00DA4E8B /* ChecksumStoringProtocol.swift in Sources */,
+				A091BF3B2F0CDCBF00DA4E8B /* DIContainer.swift in Sources */,
+				A091BEE22F0CC38D00DA4E8B /* FirestoreImportViewController.swift in Sources */,
+				A091BF132F0CD1AC00DA4E8B /* DryRunReport.swift in Sources */,
+				A091BF072F0CCA1000DA4E8B /* SeedConfig.swift in Sources */,
+				A091BF042F0CC9E200DA4E8B /* FirestoreImporter.swift in Sources */,
+				A091BEEA2F0CC47600DA4E8B /* Brand.swift in Sources */,
+				A091BEE42F0CC3A000DA4E8B /* FirestoreImportViewModel.swift in Sources */,
+				A091BEFA2F0CC8E600DA4E8B /* FirestoreImportStoringProtocol.swift in Sources */,
+				A091BF192F0CD21400DA4E8B /* PreparedInputs.swift in Sources */,
+				A091BEF52F0CC84500DA4E8B /* FirestoreImportStorage.swift in Sources */,
+				A091BF2B2F0CD72600DA4E8B /* SHA256.swift in Sources */,
+				A091BF172F0CD1D300DA4E8B /* SectionWriteResult.swift in Sources */,
+				A091BF272F0CD69D00DA4E8B /* ImportError.swift in Sources */,
+				A091BF242F0CD43300DA4E8B /* FirestoreImportingProtocol.swift in Sources */,
+				A091BF2F2F0CD84800DA4E8B /* UIButton+OnTap.swift in Sources */,
+				A091BEE62F0CC3C300DA4E8B /* FirestoreImportState.swift in Sources */,
+				A091BEEC2F0CC48C00DA4E8B /* Category.swift in Sources */,
+				A091BF152F0CD1C200DA4E8B /* ImportOutcome.swift in Sources */,
+				A091BEF72F0CC85F00DA4E8B /* ChecksumStore.swift in Sources */,
+				A091BEF12F0CC74700DA4E8B /* FirestoreImportViewModelProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,7 +495,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -193,7 +509,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
@@ -215,7 +531,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -229,7 +545,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
@@ -380,6 +696,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A091BF1A2F0CD33A00DA4E8B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.7.0;
+			};
+		};
+		A091BF302F0CDBF000DA4E8B /* XCRemoteSwiftPackageReference "Factory" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Factory?ysclid=mk26d1ie5n494880386";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A091BF1B2F0CD33A00DA4E8B /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A091BF1A2F0CD33A00DA4E8B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		A091BF1D2F0CD33A00DA4E8B /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A091BF1A2F0CD33A00DA4E8B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		A091BF312F0CDBF000DA4E8B /* Factory */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A091BF302F0CDBF000DA4E8B /* XCRemoteSwiftPackageReference "Factory" */;
+			productName = Factory;
+		};
+		A091BF332F0CDBF000DA4E8B /* FactoryKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A091BF302F0CDBF000DA4E8B /* XCRemoteSwiftPackageReference "Factory" */;
+			productName = FactoryKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A091BEAD2F0CBBCC00DA4E8B /* Project object */;
 }

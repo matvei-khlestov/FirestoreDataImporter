@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FactoryKit
+import FirebaseCore
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,9 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = ViewController()
-        window?.makeKeyAndVisible()
+        FirebaseApp.configure()
+        
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        let viewModel = Container.shared.debugImportViewModel()
+        let rootVC = FirestoreImportViewController(viewModel: viewModel)
+        window.rootViewController = UINavigationController(rootViewController: rootVC)
+        window.makeKeyAndVisible()
         return true
     }
     
